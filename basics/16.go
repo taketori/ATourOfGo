@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 const (
-	Big   = 1 << 100
-	Small = Big >> 99
+	Big   = 1 << 62
+	Small = Big >> 61
 )
 
 func needInt(x int) int { return x*10 + 1 }
