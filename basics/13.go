@@ -7,7 +7,7 @@ import (
 
 func main() {
 	x, y := 3, 4
-	f := math.Sqrt(float64(x*x + y*y))
-	z := uint(f)
+	f := math.Sqrt(x*x + y*y)
+	z := f
 	fmt.Println(x, y, z)
 }
