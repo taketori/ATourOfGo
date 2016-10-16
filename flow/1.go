@@ -7,5 +7,5 @@ func main() {
 	for i := 0; i < 10; i++ {
 		sum += 1
 	}
-	fmt.Println(sum)
+	fmt.Println(sum, i)
 }
