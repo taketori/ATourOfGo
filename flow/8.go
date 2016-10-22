@@ -4,8 +4,10 @@ import "fmt"
 
 func Sqrt(x float64) float64 {
 	r := float64(x)
-	for r-(r-(r*r-x)/(2*r)) >= 0.000001 {
-		r = r - (r*r-x)/(2*r)
+	d := float64(0.0001)
+	for t := float64(x + d); t-r >= d; {
+		t = r
+		r = t - (t*t-x)/(2*t)
 	}
 	return r
 }
