@@ -12,6 +12,7 @@ func main() {
 		fmt.Println("OS X.")
 	case "linux":
 		fmt.Println("Linux")
+		fallthrough
 	default:
 		fmt.Printf("%s", os)
 	}
