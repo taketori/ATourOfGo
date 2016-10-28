@@ -3,8 +3,10 @@ package main
 import "fmt"
 
 func main() {
-
-	defer fmt.Println("world")
+	var a string
+	a = "guys"
+	defer fmt.Println(a)
+	a = "world"
 
 	fmt.Println("hello")
 }
