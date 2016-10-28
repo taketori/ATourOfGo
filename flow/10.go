@@ -15,6 +15,8 @@ func main() {
 	fmt.Println("When's Saturday?")
 	today := time.Now().Weekday()
 	switch time.Saturday {
+	default:
+		fmt.Println("Too far away.")
 	case f():
 		fmt.Println("It's Thursday.")
 	case today + 0:
@@ -23,7 +25,5 @@ func main() {
 		fmt.Println("Tommorow")
 	case today + 2:
 		fmt.Println("In Two days.")
-	default:
-		fmt.Println("Too far away.")
 	}
 }
