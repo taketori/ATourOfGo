@@ -23,6 +23,9 @@ func main() {
 
 	s = s[:]
 	printSlice(s) //=> [7], cap=3
+
+	s = append(s, 0, 0, 0, 0) //=> 7, 0, 0, 0], cap=6
+	printSlice(s)
 }
 
 func printSlice(s []int) {
