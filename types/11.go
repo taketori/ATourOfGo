@@ -7,13 +7,13 @@ func main() {
 	printSlice(s)
 
 	s = s[:0]
-	printSlice(s)
+	printSlice(s) //=> []
 
 	s = s[:4]
-	printSlice(s)
+	printSlice(s) //=> [2, 3, 5, 7]
 
 	s = s[2:]
-	printSlice(s)
+	printSlice(s) //=> [5, 7, 11]
 }
 
 func printSlice(s []int) {
