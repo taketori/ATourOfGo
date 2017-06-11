@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	m := make(map[string]int)
 	k := "Answer"
+	m := map[string]int{k: 42}
 
-	m[k] = 42
+	//m[k] = 42
 	fmt.Println("The value:", m[k])
 
 	m[k] = 48
