@@ -1,0 +1,32 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "0.1.0",
+	//ブランチの変更も
+	// "command": "D:/app/msys64/mingw64/bin/go",
+	"command": "go",
+	"isShellCommand": true,
+	"args": [],
+	"showOutput": "always",
+	"echoCommand": true,
+	"tasks": [
+		{
+			"taskName": "build",
+			"isBuildCommand": true,
+			"args": [
+				"-v",
+				"-x",
+				"${file}"
+			]
+		},
+		{
+			"taskName": "env"
+		},
+		{
+			"taskName": "run",
+			"args": [
+				"${file}"
+			]
+		}
+	]
+}
