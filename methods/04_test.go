@@ -31,14 +31,18 @@ func TestVertex_Scale(t *testing.T) {
 		name string
 		v    *Vertex
 		args args
+		want *Vertex
 	}{
 		// TODO: Add test cases.
-		{"", &Vertex{0, 0}, args{0}},
-		{"", &Vertex{3, 4}, args{2}},
+		{"", &Vertex{0, 0}, args{0}, &Vertex{0, 0}},
+		{"", &Vertex{3, 4}, args{2}, &Vertex{6, 8}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			tt.v.Scale(tt.args.f)
+			if *tt.v != *tt.want {
+				t.Errorf("Vertex.Scale() = %v, want %v", tt.v, tt.want)
+			}
 		})
 	}
 }
