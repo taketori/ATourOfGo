@@ -25,14 +25,14 @@ func main() {
 	var i I
 
 	i = &T{"hello"}
-	descrive(i)
+	describe(i)
 	i.M()
 
 	i = F(math.Pi)
-	descrive(i)
+	describe(i)
 	i.M()
 }
 
-func descrive(i I) {
+func describe(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }
