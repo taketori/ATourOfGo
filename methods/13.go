@@ -7,7 +7,7 @@ type I interface {
 }
 
 type T struct {
-	S string
+	S interface{}
 }
 
 func (t *T) M() {
@@ -16,7 +16,7 @@ func (t *T) M() {
 
 func main() {
 	var i I
-	i = &T{"hello"}
+	i = &T{1}
 	describe(i)
 	i.M()
 }
