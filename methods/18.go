@@ -1,11 +1,17 @@
 package main
 
 import "fmt"
+import "strconv"
+import "strings"
 
 type IPaddr [4]byte
 
 func (ip IPaddr) String() string {
-	return fmt.Sprintf("%v.%v.%v.%v", ip[0], ip[1], ip[2], ip[3])
+	var r string
+	for _, v := range ip {
+		r += strconv.Itoa(int(v)) + "."
+	}
+	return strings.TrimRight(r, ".")
 }
 
 func main() {
