@@ -16,6 +16,7 @@ func do(i interface{}) {
 }
 
 func main() {
+	do(nil)
 	do(21)
 	do("hello")
 	do(true)
