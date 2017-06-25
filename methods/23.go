@@ -2,6 +2,7 @@ package main
 
 import (
 	"io"
+	"math"
 	"os"
 	"strings"
 )
@@ -12,18 +13,13 @@ type rot13Reader struct {
 
 func rot13(b byte) (r byte) {
 	switch {
-	case b < 'A':
+	case b < 'A' || 'z' < b:
 		r = b
-	case b <= 'M':
-		r = b + 13
 	case b <= 'Z':
-		r = b - 13
-	case b > 'z':
-		r = b
-	case b > 'm':
-		r = b - 13
+		r = byte(math.Mod(float64(b-'A'+13), 26)) + 'A'
 	case b >= 'a':
-		r = b + 13
+		r = byte(math.Mod(float64(b-'a'+13), 26)) + 'a'
+	default:
 	}
 	return
 }
