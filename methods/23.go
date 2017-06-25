@@ -13,13 +13,12 @@ type rot13Reader struct {
 
 func rot13(b byte) (r byte) {
 	switch {
-	case b < 'A' || 'z' < b:
-		r = b
-	case b <= 'Z':
+	case 'A' <= b && b <= 'Z':
 		r = byte(math.Mod(float64(b-'A'+13), 26)) + 'A'
-	case b >= 'a':
+	case 'a' <= b && b <= 'z':
 		r = byte(math.Mod(float64(b-'a'+13), 26)) + 'a'
 	default:
+		r = b
 	}
 	return
 }
