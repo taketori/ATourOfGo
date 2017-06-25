@@ -7,6 +7,20 @@
 	"echoCommand": true,
 	"tasks": [
 		{
+			"command": "echo",
+			"taskName": "path",
+			"args": [
+				"%PATH%"
+			]
+		},
+		{
+			"command": "go",
+			"taskName": "version",
+			"args": [
+				"version"
+			]
+		},
+		{
 			"command": "git",
 			"taskName": "master",
 			"args": [
